@@ -1,12 +1,13 @@
 
 # SpringBoot-QueryDsl-Example
 
-## 系统需求
+## 软件版本
 
-- Java17
-- MYSQL8.x
+- SpringBoot 2.6.1
+- Java 17
+- MYSQL 8.x
 
-> 需要手动创建数据库，系统启动会后自动创建数据表。
+> 需要手动创建数据库，系统启动会后自动创建数据表（包括索引）。
 
 ## Example代码
 
@@ -25,4 +26,11 @@
 - 加锁
 - 结果集封装
 - spring-data-jpa 的支持
+
+## 讨论
+
+可以在这个帖子，讨论相关问题
+
+[https://springboot.io](https://springboot.io)
+
 
