@@ -1,6 +1,7 @@
 package io.springboot.example.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
@@ -52,6 +53,9 @@ public class User implements Serializable {
 	@Enumerated(EnumType.STRING)
 	private Gender gender;
 	
+	@Column(columnDefinition = "DECIMAL(10,2)COMMENT '账户余额'")
+	private BigDecimal balance;
+	
 	@Column(name = "department_id", columnDefinition = "INT UNSIGNED COMMENT '部门ID'", nullable = false)
 	private Integer departmentId;
 	
@@ -60,6 +64,9 @@ public class User implements Serializable {
 	
 	@Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间'", nullable = false)
 	private LocalDateTime createAt;
+	
+	@Column(columnDefinition = "TIMESTAMP DEFAULT NULL COMMENT '修改时间'")
+	private LocalDateTime updateAt;	
 	
 	public static enum Gender {
 		MALE,		// 男

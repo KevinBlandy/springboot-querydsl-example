@@ -6,6 +6,7 @@ import io.springboot.example.entity.User;
 import io.springboot.example.service.DepartmentService;
 import io.springboot.example.service.UserService;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import javax.transaction.Transactional;
@@ -49,15 +50,15 @@ public class DataInit {
 		this.departmentService.save(dept3);
 		
 		// 创建一些用户
-		User u1 = User.builder().name("曹操").createAt(LocalDateTime.now()).gender(User.Gender.MALE).departmentId(dept1.getId()).enabled(true).build();
-		User u2 = User.builder().name("许褚").createAt(LocalDateTime.now()).gender(User.Gender.MALE).departmentId(dept1.getId()).enabled(true).build();
+		User u1 = User.builder().name("曹操").balance(BigDecimal.valueOf(22.5)).createAt(LocalDateTime.now()).gender(User.Gender.MALE).departmentId(dept1.getId()).enabled(true).build();
+		User u2 = User.builder().name("许褚").balance(BigDecimal.valueOf(15)).createAt(LocalDateTime.now()).gender(User.Gender.MALE).departmentId(dept1.getId()).enabled(true).build();
 		
-		User u3 = User.builder().name("刘备").createAt(LocalDateTime.now()).gender(User.Gender.MALE).departmentId(dept2.getId()).enabled(true).build();
-		User u4 = User.builder().name("关羽").createAt(LocalDateTime.now()).gender(User.Gender.MALE).departmentId(dept2.getId()).enabled(true).build();
-		User u5 = User.builder().name("张飞").createAt(LocalDateTime.now()).gender(User.Gender.MALE).departmentId(dept2.getId()).enabled(true).build();
+		User u3 = User.builder().name("刘备").balance(BigDecimal.valueOf(24)).createAt(LocalDateTime.now()).gender(User.Gender.MALE).departmentId(dept2.getId()).enabled(true).build();
+		User u4 = User.builder().name("关羽").balance(BigDecimal.valueOf(100)).createAt(LocalDateTime.now()).gender(User.Gender.MALE).departmentId(dept2.getId()).enabled(true).build();
+		User u5 = User.builder().name("张飞").balance(BigDecimal.valueOf(9)).createAt(LocalDateTime.now()).gender(User.Gender.MALE).departmentId(dept2.getId()).enabled(true).build();
 		
-		User u6 = User.builder().name("孙权").createAt(LocalDateTime.now()).gender(User.Gender.MALE).departmentId(dept3.getId()).enabled(true).build();
-		User u7 = User.builder().name("孙尚香").createAt(LocalDateTime.now()).gender(User.Gender.FEMALE).departmentId(dept3.getId()).enabled(true).build();
+		User u6 = User.builder().name("孙权").balance(BigDecimal.valueOf(12)).createAt(LocalDateTime.now()).gender(User.Gender.MALE).departmentId(dept3.getId()).enabled(true).build();
+		User u7 = User.builder().name("孙尚香").balance(BigDecimal.valueOf(54)).createAt(LocalDateTime.now()).gender(User.Gender.FEMALE).departmentId(dept3.getId()).enabled(true).build();
 		
 		this.userService.save(u1);
 		this.userService.save(u2);
