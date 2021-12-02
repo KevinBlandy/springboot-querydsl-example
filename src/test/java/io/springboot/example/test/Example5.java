@@ -15,7 +15,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
-
+/**
+ * 
+ * 聚合查询
+ * @author KevinBlandy
+ *
+ */
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = ExampleApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
