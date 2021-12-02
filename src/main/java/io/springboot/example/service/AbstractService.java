@@ -255,40 +255,48 @@ public class AbstractService<T, ID>  implements BaseService <T, ID>{
 	}
 
 	@Override
+	@Transactional(rollbackFor = Throwable.class)
 	public <S extends T> List<S> saveAllAndFlush(Iterable<S> entities) {
 		return this.baseRepository.saveAllAndFlush(entities);
 	}
 
 	@Override
+	@Transactional(rollbackFor = Throwable.class)
 	public void deleteAllInBatch(Iterable<T> entities) {
 		this.baseRepository.deleteAllInBatch(entities);
 	}
 
 	@Override
+	@Transactional( rollbackFor = Throwable.class)
 	public void deleteAllByIdInBatch(Iterable<ID> ids) {
 		this.baseRepository.deleteAllByIdInBatch(ids);
 	}
 
 	@Override
+	@Transactional(readOnly = true, rollbackFor = Throwable.class)
 	public T getById(ID id) {
 		return this.baseRepository.getById(id);
 	}
 
 	@Override
+	@Transactional(rollbackFor = Throwable.class)
 	public void deleteAllById(Iterable<? extends ID> ids) {
 		this.baseRepository.deleteAllById(ids);
 	}
 	
 	@Override
+	@Transactional(readOnly = true, rollbackFor = Throwable.class)
 	public <S extends T, R> R findBy(Example<S> example, Function<FetchableFluentQuery<S>, R> queryFunction) {
 		return this.baseRepository.findBy(example, queryFunction);
 	}
 
 	@Override
+	@Transactional(readOnly = true, rollbackFor = Throwable.class)
 	public <S extends T, R> R findBy(Predicate predicate, Function<FetchableFluentQuery<S>, R> queryFunction) {
 		return this.baseRepository.findBy(predicate, queryFunction);
 	}
 	
+	// -----------------------
 	
 	protected JPAQueryFactory newQuery() {
 		return new JPAQueryFactory(this.entityManager);
