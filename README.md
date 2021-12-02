@@ -31,6 +31,6 @@
 
 可以在这个帖子，讨论相关问题
 
-[https://springboot.io](https://springboot.io)
+[https://springboot.io/t/topic/4424](https://springboot.io/t/topic/4424)
 
 
