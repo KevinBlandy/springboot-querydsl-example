@@ -8,7 +8,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * 
- * spring-data-jpa + querydsl 
  * 
  * 
  * @author KevinBlandy
