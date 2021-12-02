@@ -18,14 +18,14 @@
 - `Example1` 单表的查询/编辑/删除
 - `Example2` join查询
 - `Example3` 分页/排序
-
-- 子查询
-- exists查询
-- 聚合查询
-- 条件分组
-- 加锁
-- 结果集封装
-- spring-data-jpa 的支持
+- `Example4` 条件列子查询/查询列子查询/exists子查询/count子查询
+- `Example5` 聚合查询
+- `Example6` 条件分组
+- `Example7` 加锁
+- `Exapmle8` 结果集封装
+- `Exapmle9` 结果列的一些操作。case/转换/null判断...
+- `Exapmle10` spring-data-jpa 的支持
+- TODO
 
 ## 讨论
 

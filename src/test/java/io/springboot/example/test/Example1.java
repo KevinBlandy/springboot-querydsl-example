@@ -110,6 +110,7 @@ public class Example1 {
 		long ret = query.update(qUser)
 			.set(qUser.balance, qUser.balance.add(100))  // 自增
 			.set(qUser.updateAt, LocalDateTime.now())	// 设置列值
+			.setNull(qUser.updateAt) 					// 设置为null
 			.set(qUser.departmentId, 
 					JPAExpressions.select(qDepartment.id).from(qDepartment).where(qDepartment.id.eq(qUser.id))
 			) // 子查询赋值（这里完全了为了演示这么写的）
